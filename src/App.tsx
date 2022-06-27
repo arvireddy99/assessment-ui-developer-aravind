@@ -10,8 +10,6 @@ function App() {
     setTimeout(() => {
       // Add event listener to it's child button element
       buttonDiv?.firstChild?.addEventListener("click", () => {
-        console.log('Herer');
-        
         setCurrentStatus("One From old");
       });
       buttonDiv?.childNodes[1]?.addEventListener("click", () => {
@@ -21,7 +19,7 @@ function App() {
         setCurrentStatus("Three From old");
       });
       
-    }, 100);      
+    }, 200);      
     return () => {
       buttonDiv?.firstChild?.removeEventListener("click", () => ({}));
       buttonDiv?.childNodes[1]?.removeEventListener("click", () => ({}));
